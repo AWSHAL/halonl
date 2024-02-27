@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main  # Ajusta la rama en la que deseas ejecutar el flujo de trabajo
+      - master  # Ajusta la rama en la que deseas ejecutar el flujo de trabajo
 
 jobs:
   build:
