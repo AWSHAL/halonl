@@ -20,7 +20,7 @@ fs.readdirSync('./src').forEach(file => {
 module.exports = {
   entry: entry,
   output: {
-    path: path.join(__dirname, 'dist'),                          
+    path: path.join(__dirname, 'f'),                          
     filename: '[name].js',
   },
   module: {
