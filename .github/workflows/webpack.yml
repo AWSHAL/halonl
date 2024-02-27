@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - main  # Ajusta la rama en la que deseas ejecutar el flujo de trabajo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'  # Ajusta la versión de Node.js según tus necesidades
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist  # Ajusta la ruta del directorio de salida de tu compilación
