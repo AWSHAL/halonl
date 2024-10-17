@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var clinicElement = document.getElementById(inputId + "_id_clinic");
       if (this.value !== "" && this.value == 189) {
         // Añadir opction
-        addOption(clinicElement, 90, 'Banco Madrid');
+        addOption(clinicElement, 90, "Banco Madrid");
         viewAlert();
       } else {
         // Eliminar option
@@ -285,14 +285,14 @@ document.addEventListener("DOMContentLoaded", function () {
     select.appendChild(option);
     select.value = value;
     select.style.display = "none";
-  }
+  };
 
   const removeOption = (select, value) => {
     let optionToRemove = select.querySelector('option[value="' + value + '"]');
     select.removeChild(optionToRemove);
-    select.value = '';
+    select.value = "";
     select.style.display = "block";
-  }
+  };
 
   // Alerta de motivo de consulta
   const viewAlert = () => {
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let alertElement = document.createElement("h5");
     alertElement.id = "alert-clinic";
     alertElement.textContent =
-      "Servicio exclusivo para la clínica situada en C/ Villa de Marín, 7 (Madrid)";
+      "Servicio exclusivo para la clínica situada en C/ Villa de Marín, 7 (Madrid). <br> La edad para donar es entre 18-33 años.";
     formElement.appendChild(alertElement);
   };
 
